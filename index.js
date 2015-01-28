@@ -18,14 +18,12 @@ module.exports = function(options) {
     }
 
     getWebAppsActor(client).then(function(webAppsActor) {
-      setTimeout(function() {
-        launchApp(webAppsActor, manifestURL)
-          .then(function(result) {
-            resolve(result);
-          }, function(err) {
-            console.error(err);
-          });
-      }, 1000);
+      launchApp(webAppsActor, manifestURL)
+        .then(function(result) {
+          resolve(result);
+        }, function(err) {
+          reject(err);
+        });
     });
 
   });
