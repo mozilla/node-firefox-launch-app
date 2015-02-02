@@ -67,7 +67,7 @@ startSimulator().then(function(simulator) {
       }).then(function(apps) {
         if(apps.length > 0) {
           var firstApp = apps[0];
-          launchApp(firstApp.manifestURL);
+          launchApp({ manifestURL: firstApp.manifestURL });
         }
       });
     });
