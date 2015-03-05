@@ -34,6 +34,7 @@
     "node-firefox-connect": "^1.0.0",
     "node-firefox-find-app": "^1.0.0",
     "node-firefox-install-app": "^1.0.0",
-    "node-firefox-start-simulator": "^1.1.0"
+    "node-firefox-start-simulator": "^1.1.0",
+    "nodemock": "^0.3.4"
   }
 }

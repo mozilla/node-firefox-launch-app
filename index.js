@@ -46,13 +46,11 @@ function getWebAppsActor(client) {
 
 
 function launchApp(webAppsActor, appManifestURL) {
-  console.log('launching', appManifestURL);
   return new Promise(function(resolve, reject) {
     webAppsActor.launch(appManifestURL, function(err, response) {
       if (err) {
         return reject(err);
       }
-      console.log('after launching', err);
       resolve(response);
     });
   });
